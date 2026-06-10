@@ -12,15 +12,11 @@ TAM = 32
 
 # mapa
 mapa = []
-try:
-    arquivo = open('mapa.txt', 'r')
-    for linha in arquivo:
-        mapa.append(list(linha.strip()))
-    arquivo.close()
-except FileNotFoundError:
-    print("Erro: Crie um arquivo 'mapa.txt' na mesma pasta do jogo.")
-    pygame.quit()
-    sys.exit()
+arquivo = open('mapa.txt', 'r')
+for linha in arquivo:
+    mapa.append(list(linha.strip()))
+arquivo.close()
+
 
 # tirar do arquivo
 spritesheet = pygame.image.load('personagem.png').convert_alpha()
