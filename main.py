@@ -60,24 +60,24 @@ while True:
             sys.exit()
 
     
-    teclas = pygame.key.get_pressed()
+    keys = pygame.key.get_pressed()
     andando = False
     prox_x = px
     prox_y = py
 
-    if teclas[pygame.K_LEFT] or teclas[pygame.K_a]:
+    if keys[pygame.K_LEFT] or keys[pygame.K_a]:
         prox_x -= vel
         direcao = 'esquerda'
         andando = True
-    elif teclas[pygame.K_RIGHT] or teclas[pygame.K_d]:
+    if keys[pygame.K_RIGHT] or keys[pygame.K_d]:
         prox_x += vel
         direcao = 'direita'
         andando = True
-    elif teclas[pygame.K_UP] or teclas[pygame.K_w]:
+    if keys[pygame.K_UP] or keys[pygame.K_w]:
         prox_y -= vel
         direcao = 'cima'
         andando = True
-    elif teclas[pygame.K_DOWN] or teclas[pygame.K_s]:
+    if keys[pygame.K_DOWN] or keys[pygame.K_s]:
         prox_y += vel
         direcao = 'baixo'
         andando = True
